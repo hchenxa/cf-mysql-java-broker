@@ -1,6 +1,7 @@
 package org.cloudfoundry.community.broker.mysql.controller
 
 import org.cloudfoundry.community.broker.mysql.service.ServiceBinding
+import org.cloudfoundry.community.broker.mysql.service.ServiceBindingCredentials
 import org.cloudfoundry.community.broker.mysql.service.ServiceBindingService
 import org.cloudfoundry.community.broker.mysql.service.ServiceInstance
 import org.cloudfoundry.community.broker.mysql.service.ServiceInstanceService
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.ResponseBody
+import org.apache.log4j.Logger;
 
 /**
  * Author: Sridharan Kuppa sridharan.kuppa@gmail.com
@@ -19,13 +21,17 @@ import org.springframework.web.bind.annotation.ResponseBody
 @RequestMapping("/v2/service_instances/{instanceId}/service_bindings/{bindingId}")
 class ServiceBindingRestController {
   @Autowired ServiceBindingService bindingService
+  // @Autowired ServiceBindingCredentials
 
   @RequestMapping(method = RequestMethod.PUT)
   @ResponseBody
-  ServiceBinding update(@PathVariable String instanceId, @PathVariable String bindingId) {
+  ServiceBindingCredentials update(@PathVariable String instanceId, @PathVariable String bindingId) {
     ServiceBinding binding = bindingService.findById(bindingId, instanceId)
     bindingService.save(binding)
-    return binding
+    Logger logger = Logger.getLogger(getClass());
+    logger.info("in binding service contorller function, the binding was '${binding}'");
+    ServiceBindingCredentials credentials = new ServiceBindingCredentials(binding.database, binding.username, binding.password)
+    return credentials
   }
 
   @RequestMapping(method = RequestMethod.DELETE)

@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.stereotype.Service
 
 import java.security.MessageDigest
+import org.apache.log4j.Logger;
 
 /**
  * Author: Sridharan Kuppa sridharan.kuppa@gmail.com
@@ -32,6 +33,7 @@ class ServiceBindingService implements EnvironmentAware {
     } catch (Exception e) {
       e.message =~ /no such grant/
     }
+
     return binding
   }
 
@@ -39,10 +41,13 @@ class ServiceBindingService implements EnvironmentAware {
     jdbcTemplate.execute("CREATE USER '${binding.username}' IDENTIFIED BY '${binding.password}'")
     jdbcTemplate.execute("GRANT ALL PRIVILEGES ON `${binding.database}`.* TO '${binding.username}'@'%'")
     jdbcTemplate.execute('FLUSH PRIVILEGES')
+    Logger logger = Logger.getLogger(getClass());
+    logger.info("Now finish the save function");
   }
 
   def destroy(ServiceBinding binding) {
     jdbcTemplate.execute("DROP USER '${binding.username}'")
+    jdbcTemplate.execute('FLUSH PRIVILEGES')
   }
 }
 
@@ -60,5 +65,17 @@ class ServiceBinding {
     this.jdbc_url = environment.getProperty('spring.datasource.url')
     this.uri = this.jdbc_url.substring(5)
     this.database = instance.database
+  }
+}
+
+class ServiceBindingCredentials {
+  def credentials = [:]
+
+  ServiceBindingCredentials(String database, String username, String password) {
+    Logger logger = Logger.getLogger(getClass());
+    logger.info("In Service binding credential functions");
+    this.credentials.username = username
+    this.credentials.password = password
+    this.credentials.database = database
   }
 }
