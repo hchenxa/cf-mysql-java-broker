@@ -27,5 +27,4 @@ services:
       bullets:
       - content: Shared MySQL server
       - content: 5 MB storage
-      - content: 40 concurrent connections
-
+      - content: 1 concurrent connections

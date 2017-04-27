@@ -4,9 +4,10 @@ spring:
   application:
     name: cf-mysql-java-broker
   datasource:
-    url: jdbc:mysql://localhost/test
-    username: root
-    password: root
+    url: jdbc:mysql://us-cdbr-iron-east-03.cleardb.net:3306/
+    username: b7327eef1da2e8
+    password: 1846c8da
     driverClassName: com.mysql.jdbc.Driver
+    maxActive: 2
   main:
     show_banner: false

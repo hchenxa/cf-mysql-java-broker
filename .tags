@@ -1,0 +1,31 @@
+services	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^services:$/;"	function	line:6
+id	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^  id: 3101b971-1044-4816-a7ac-9ded2e028079$/;"	function	line:8
+description	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^  description: MySQL service for application development and testing$/;"	function	line:9
+tags	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^  tags:$/;"	function	line:10
+max_db_per_node	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^  max_db_per_node: 250$/;"	function	line:13
+metadata	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^  metadata:$/;"	function	line:14
+provider	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^    provider:$/;"	function	line:15
+name	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^      name:$/;"	function	line:16
+listing	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^    listing:$/;"	function	line:17
+imageUrl	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^      imageUrl: ~$/;"	function	line:18
+blurb	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^      blurb: MySQL service for application development and testing$/;"	function	line:19
+plans	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^  plans:$/;"	function	line:20
+id	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^    id: 2451fa22-df16-4c10-ba6e-1f682d3dcdc9$/;"	function	line:22
+description	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^    description: Shared MySQL Server, 5mb persistent disk, 40 max concurrent connections$/;"	function	line:23
+max_storage_mb	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^    max_storage_mb: 5 # in MB$/;"	function	line:24
+metadata	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^    metadata:$/;"	function	line:25
+cost	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^      cost: 0.0$/;"	function	line:26
+bullets	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/settings.yml	/^      bullets:$/;"	function	line:27
+server	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/application.yml	/^server:$/;"	function	line:1
+port	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/application.yml	/^  port: 9000$/;"	function	line:2
+spring	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/application.yml	/^spring:$/;"	function	line:3
+application	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/application.yml	/^  application:$/;"	function	line:4
+name	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/application.yml	/^    name: cf-mysql-java-broker$/;"	function	line:5
+datasource	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/application.yml	/^  datasource:$/;"	function	line:6
+url	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/application.yml	/^    url: jdbc:mysql:\/\/us-cdbr-iron-east-03.cleardb.net:3306\/$/;"	function	line:7
+username	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/application.yml	/^    username: b7327eef1da2e8$/;"	function	line:8
+password	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/application.yml	/^    password: 1846c8da$/;"	function	line:9
+driverClassName	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/application.yml	/^    driverClassName: com.mysql.jdbc.Driver$/;"	function	line:10
+maxActive	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/application.yml	/^    maxActive: 2$/;"	function	line:11
+main	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/application.yml	/^  main:$/;"	function	line:12
+show_banner	/Users/hchenxa/Documents/hchenxa/src/hchenxa_github/cf-mysql-java-broker/src/main/resources/application.yml	/^    show_banner: false$/;"	function	line:13
